@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+    jekyll:
+        image: ubuntu:latest
+        stdin_open: true
+        tty: true
+        ports:
+            - "127.0.0.1:4000:4000"
+            - "127.0.0.1:4001:35729"
+        volumes:
+            - .:/jekyllroot
+        command: bash -c "cd /jekyllroot && ./prepare.sh"
