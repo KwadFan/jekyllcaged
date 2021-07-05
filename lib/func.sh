@@ -117,12 +117,6 @@ function gitclone() {
     esac
 }
 
-function overide_root() {
-    warn_msg "During clone as root, we have to provide rwx permissions ..."
-    chmod -R 0766 $PWD/mainsail
-    health_check
-}
-
 function install_gems() {
     ok_msg "Installing RubyGems ..."
     echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
