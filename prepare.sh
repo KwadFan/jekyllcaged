@@ -32,7 +32,6 @@ install_gems
 
 # Setup Workspace
 gitclone
-overide_root
 setup_workspace
 
 # Start local Jekyll Server
