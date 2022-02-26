@@ -2,5 +2,4 @@
 #
 # This file may be distributed under the terms of the GNU GPLv3 license
 
-# ignore cloned folders
-**/docs
+url: "http://localhost:4000"

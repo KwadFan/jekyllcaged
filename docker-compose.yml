@@ -1,12 +1,25 @@
+# Copyright (C) 2021 Stephan Wendel <me@stephanwe.de>
+#
+# This file may be distributed under the terms of the GNU GPLv3 license
+
 version: "3.9"
 services:
-    jekyll:
-        image: ubuntu:latest
-        stdin_open: true
-        tty: true
-        ports:
-            - "127.0.0.1:4000:4000"
-            - "127.0.0.1:4001:35729"
-        volumes:
-            - .:/jekyllroot
-        command: bash -c "cd /jekyllroot && ./prepare.sh"
+  mainsaildocs:
+    image: jekyll/jekyll:latest
+    environment:
+      - JEKYLL_ENV=docker
+    #stdin_open: true
+    tty: true
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - ./docs:/srv/jekyll
+      - ./_config.docker.yml:/srv/jekyll/_config.docker.yml
+    command: |
+      jekyll serve
+      --config _config.yml,_config.docker.yml
+      --incremental
+      --livereload
+      --livereload-min-delay 1
+      --livereload-max-delay 3
