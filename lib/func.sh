@@ -106,9 +106,9 @@ function gitclone() {
         ;;
         
         *)
-            warn_msg "Looking for local Workspace ( ./mainsail/ )"
-            if [ -d $PWD/mainsail ]; then
-                ok_msg "mainsail Directory found ..."
+            warn_msg "Looking for local Workspace ( ./docs/ )"
+            if [ -d $PWD/docs ]; then
+                ok_msg "docs Directory found ..."
             else
                 fail_msg "No usable Workspace found! Exiting!"
                 exit 1
@@ -136,7 +136,7 @@ function install_gems() {
 }
 
 function setup_workspace() {
-    cd $PWD/mainsail/docs
+    cd $PWD/docs
     ok_msg "Setup Jekyll Workspace ..."
     # Make sure Directory is not empty
     if [ -f Gemfile ]; then
@@ -150,7 +150,7 @@ function setup_workspace() {
             ;;
             esac
         else
-            fail_msg "Directory mainsail/docs is empty! Exiting!"
+            fail_msg "Directory 'docs' is empty! Exiting!"
             exit 1
     fi
     health_check

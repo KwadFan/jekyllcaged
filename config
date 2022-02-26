@@ -19,7 +19,7 @@ JEKYLL_DEPS="ruby-full build-essential zlib1g-dev"
 ## DON'T FORGET TO SET TO "n" AFTERWARDS!
 
 CLONE_GIT=n
-MAINSAIL_REPO="meteyou/mainsail"
+MAINSAIL_REPO="mainsail-crew/docs"
 
 ### DO NOT EDIT BELOW!
 DEBIAN_FRONTEND=noninteractive
