@@ -26,7 +26,7 @@ Those are for example: Atom, Sublime, VSCode or Notepad++ **_
 
 ### Launch our trap, to cage in Jekyll :)
 
-    docker-compose up
+    docker-compose up --remove-orphans
 
 ---
 

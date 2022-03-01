@@ -15,10 +15,10 @@ services:
       - "35729:35729"
     volumes:
       - ./docs:/srv/jekyll
-      - ./_config.docker.yml:/srv/jekyll/_config.docker.yml
+      - ./_config.docker.yml:/docker/_config.docker.yml
     command: |
       jekyll serve
-      --config _config.yml,_config.docker.yml
+      --config _config.yml,/docker/_config.docker.yml
       --incremental
       --livereload
       --livereload-min-delay 1
